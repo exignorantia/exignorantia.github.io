@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="10.339" y="10.339" width="38.562" height="38.562" transform="translate(29.619 -12.269) rotate(45)" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x="1" y="1.061" width="57.239" height="57.177" fill="none"/>
+        <path d="M19.12,35.05h3.16v-6.32h-3.36v-2h3.36v-1.68c0-.413.057-.79.17-1.13s.29-.633.53-.88c.24-.247.543-.44.91-.58.367-.14.796-.21,1.29-.21h3.48v2h-3.82v2.48h3.82v2h-3.82v6.32h3.36v2h-9.08v-2Z" fill="#ff0014"/>
+        <path d="M30.3,37.05l3.86-5.24-3.64-5.08h2.94l1.24,1.82.96,1.44h.14l.96-1.44,1.24-1.82h2.72l-3.64,4.96,3.86,5.36h-2.96l-1.42-2.08-.98-1.46h-.14l-.98,1.46-1.42,2.08h-2.74Z" fill="#ff0014"/>
+      </g>
+    </g>
+  </g>
+</svg>

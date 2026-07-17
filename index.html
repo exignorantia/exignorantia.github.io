@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EX IGNORANTIA OS</title>
+  <meta name="description" content="EX Ignorantia OS — site experimental em formato de sistema operacional retrô." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="crt-lines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <section id="boot" class="boot-screen" aria-label="Tela de boot EX Ignorantia">
+    <div class="boot-border"></div>
+    <div class="bios-frame">
+      <div class="bios-head">
+        <span>EX IGNORANTIA BIOS</span>
+        <span>v0.13.666</span>
+      </div>
+      <pre class="ascii-logo" aria-label="EX Ignorantia ASCII logo">
+███████╗██╗  ██╗    ██╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ███╗   ██╗████████╗██╗ █████╗ 
+██╔════╝╚██╗██╔╝    ██║██╔════╝ ████╗  ██║██╔═══██╗██╔══██╗██╔══██╗████╗  ██║╚══██╔══╝██║██╔══██╗
+█████╗   ╚███╔╝     ██║██║  ███╗██╔██╗ ██║██║   ██║██████╔╝███████║██╔██╗ ██║   ██║   ██║███████║
+██╔══╝   ██╔██╗     ██║██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║██║╚██╗██║   ██║   ██║██╔══██║
+███████╗██╔╝ ██╗    ██║╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║██║ ╚████║   ██║   ██║██║  ██║
+╚══════╝╚═╝  ╚═╝    ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═╝
+      </pre>
+      <pre id="bootText" class="boot-text" aria-live="polite"></pre>
+      <div class="bios-foot">
+        <span>PRESS DEL TO ENTER FORBIDDEN SETUP</span>
+        <button id="skipBoot" type="button">SKIP BOOT</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="desktop" class="desktop" aria-label="EX Ignorantia operating system desktop">
+    <div class="desktop-frame" aria-hidden="true"></div>
+    <div class="desktop-bg" aria-hidden="true">
+<svg class="desktop-bg-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="d" x1="3913.165" y1="-1072.338" x2="3913.165" y2="-2872.509" gradientTransform="translate(-1012.4229 -2932.4232) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="currentColor" stop-opacity="0"/>
+      <stop offset=".462" stop-color="currentColor"/>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="e" x1="3898.199" y1="-1072.338" x2="3898.199" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="f" x1="3883.233" y1="-1072.338" x2="3883.233" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="g" x1="3868.267" y1="-1072.338" x2="3868.267" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="h" x1="3853.301" y1="-1072.338" x2="3853.301" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="i" x1="3838.335" y1="-1072.338" x2="3838.335" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="j" x1="3823.369" y1="-1072.338" x2="3823.369" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="k" x1="3808.403" y1="-1072.338" x2="3808.403" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="l" x1="3793.437" y1="-1072.338" x2="3793.437" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="m" x1="3778.471" y1="-1072.338" x2="3778.471" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="n" x1="3763.505" y1="-1072.338" x2="3763.505" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="o" x1="3748.539" y1="-1072.338" x2="3748.539" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="p" x1="3733.573" y1="-1072.338" x2="3733.573" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="q" x1="3718.607" y1="-1072.338" x2="3718.607" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="r" x1="3703.641" y1="-1072.338" x2="3703.641" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="s" x1="3688.675" y1="-1072.338" x2="3688.675" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="t" x1="3673.709" y1="-1072.338" x2="3673.709" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="u" x1="3658.743" y1="-1072.338" x2="3658.743" y2="-2872.509" xlink:href="#d"/>
+    <linearGradient id="v" x1="3643.777" y1="-1072.337" x2="3643.777" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="w" x1="3628.811" y1="-1072.337" x2="3628.811" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="x" x1="3613.845" y1="-1072.337" x2="3613.845" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="y" x1="3598.879" y1="-1072.337" x2="3598.879" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="z" x1="3583.913" y1="-1072.337" x2="3583.913" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="aa" x1="3568.947" y1="-1072.337" x2="3568.947" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ab" x1="3553.981" y1="-1072.337" x2="3553.981" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ac" x1="3539.015" y1="-1072.337" x2="3539.015" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ad" x1="3524.049" y1="-1072.337" x2="3524.049" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ae" x1="3509.083" y1="-1072.337" x2="3509.083" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="af" x1="3494.117" y1="-1072.337" x2="3494.117" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ag" x1="3479.151" y1="-1072.337" x2="3479.151" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ah" x1="3464.185" y1="-1072.337" x2="3464.185" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ai" x1="3449.219" y1="-1072.337" x2="3449.219" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="aj" x1="3434.253" y1="-1072.337" x2="3434.253" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ak" x1="3419.287" y1="-1072.337" x2="3419.287" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="al" x1="3404.321" y1="-1072.337" x2="3404.321" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="am" x1="3389.355" y1="-1072.337" x2="3389.355" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="an" x1="3374.389" y1="-1072.337" x2="3374.389" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ao" x1="3359.423" y1="-1072.337" x2="3359.423" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ap" x1="3344.457" y1="-1072.337" x2="3344.457" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="aq" x1="3329.49" y1="-1072.337" x2="3329.49" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ar" x1="3314.524" y1="-1072.337" x2="3314.524" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="as" x1="3299.558" y1="-1072.337" x2="3299.558" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="at" x1="3284.592" y1="-1072.337" x2="3284.592" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="au" x1="3269.626" y1="-1072.337" x2="3269.626" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="av" x1="3254.66" y1="-1072.337" x2="3254.66" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="aw" x1="3239.694" y1="-1072.337" x2="3239.694" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ax" x1="3224.728" y1="-1072.337" x2="3224.728" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ay" x1="3209.762" y1="-1072.337" x2="3209.762" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="az" x1="3194.796" y1="-1072.337" x2="3194.796" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="ba" x1="3179.83" y1="-1072.337" x2="3179.83" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bb" x1="3164.864" y1="-1072.337" x2="3164.864" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bc" x1="3149.898" y1="-1072.337" x2="3149.898" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bd" x1="3134.932" y1="-1072.337" x2="3134.932" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="be" x1="3119.966" y1="-1072.337" x2="3119.966" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bf" x1="3105" y1="-1072.337" x2="3105" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bg" x1="3090.034" y1="-1072.337" x2="3090.034" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bh" x1="3075.068" y1="-1072.337" x2="3075.068" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bi" x1="3060.102" y1="-1072.337" x2="3060.102" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bj" x1="3045.136" y1="-1072.337" x2="3045.136" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bk" x1="3030.17" y1="-1072.337" x2="3030.17" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bl" x1="3015.204" y1="-1072.337" x2="3015.204" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bm" x1="3000.238" y1="-1072.337" x2="3000.238" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bn" x1="2985.272" y1="-1072.337" x2="2985.272" y2="-2872.508" xlink:href="#d"/>
+    <linearGradient id="bo" x1="1860.086" y1="755.936" x2="1860.086" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bp" x1="1845.331" y1="755.936" x2="1845.331" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bq" x1="1830.575" y1="755.936" x2="1830.575" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="br" x1="1815.82" y1="755.936" x2="1815.82" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bs" x1="1801.064" y1="755.936" x2="1801.064" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bt" x1="1786.309" y1="755.936" x2="1786.309" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bu" x1="1771.553" y1="755.936" x2="1771.553" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bv" x1="1756.798" y1="755.936" x2="1756.798" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bw" x1="1742.042" y1="755.936" x2="1742.042" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bx" x1="1727.287" y1="755.936" x2="1727.287" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="by" x1="1712.531" y1="755.936" x2="1712.531" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="bz" x1="1697.776" y1="755.936" x2="1697.776" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ca" x1="1683.02" y1="755.936" x2="1683.02" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cb" x1="1668.265" y1="755.936" x2="1668.265" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cc" x1="1653.509" y1="755.936" x2="1653.509" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cd" x1="1638.754" y1="755.936" x2="1638.754" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ce" x1="1623.998" y1="755.936" x2="1623.998" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cf" x1="1609.243" y1="755.936" x2="1609.243" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cg" x1="1594.487" y1="755.936" x2="1594.487" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ch" x1="1579.732" y1="755.936" x2="1579.732" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ci" x1="1564.976" y1="755.936" x2="1564.976" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cj" x1="1550.221" y1="755.936" x2="1550.221" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ck" x1="1535.465" y1="755.936" x2="1535.465" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cl" x1="1520.71" y1="755.936" x2="1520.71" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cm" x1="1505.954" y1="755.936" x2="1505.954" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cn" x1="1491.199" y1="755.936" x2="1491.199" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="co" x1="1476.443" y1="755.936" x2="1476.443" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cp" x1="1461.688" y1="755.936" x2="1461.688" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cq" x1="1446.932" y1="755.936" x2="1446.932" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cr" x1="1432.177" y1="755.936" x2="1432.177" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cs" x1="1417.421" y1="755.936" x2="1417.421" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ct" x1="1402.666" y1="755.936" x2="1402.666" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cu" x1="1387.91" y1="755.936" x2="1387.91" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cv" x1="1373.154" y1="755.936" x2="1373.154" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cw" x1="1358.399" y1="755.936" x2="1358.399" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cx" x1="1343.643" y1="755.936" x2="1343.643" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cy" x1="1328.888" y1="755.936" x2="1328.888" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="cz" x1="1314.132" y1="755.936" x2="1314.132" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="da" x1="1299.377" y1="755.936" x2="1299.377" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="db" x1="1284.621" y1="755.936" x2="1284.621" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dc" x1="1269.866" y1="755.936" x2="1269.866" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dd" x1="1255.11" y1="755.936" x2="1255.11" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="de" x1="1240.355" y1="755.936" x2="1240.355" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="df" x1="1225.599" y1="755.936" x2="1225.599" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dg" x1="1210.844" y1="755.936" x2="1210.844" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dh" x1="1196.088" y1="755.936" x2="1196.088" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="di" x1="1181.333" y1="755.936" x2="1181.333" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dj" x1="1166.577" y1="755.936" x2="1166.577" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dk" x1="1151.822" y1="755.936" x2="1151.822" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dl" x1="1137.066" y1="755.936" x2="1137.066" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dm" x1="1122.311" y1="755.936" x2="1122.311" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dn" x1="1107.555" y1="755.936" x2="1107.555" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="do" x1="1092.8" y1="755.936" x2="1092.8" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dp" x1="1078.044" y1="755.936" x2="1078.044" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dq" x1="1063.289" y1="755.936" x2="1063.289" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dr" x1="1048.533" y1="755.936" x2="1048.533" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ds" x1="1033.778" y1="755.936" x2="1033.778" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dt" x1="1019.022" y1="755.936" x2="1019.022" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="du" x1="1004.267" y1="755.936" x2="1004.267" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dv" x1="989.511" y1="755.936" x2="989.511" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dw" x1="974.756" y1="755.936" x2="974.756" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dx" x1="960" y1="755.936" x2="960" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dy" x1="945.245" y1="755.936" x2="945.245" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="dz" x1="930.489" y1="755.936" x2="930.489" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ea" x1="915.734" y1="755.936" x2="915.734" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eb" x1="900.978" y1="755.936" x2="900.978" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ec" x1="886.223" y1="755.936" x2="886.223" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ed" x1="871.467" y1="755.936" x2="871.467" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ee" x1="856.712" y1="755.936" x2="856.712" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ef" x1="841.956" y1="755.936" x2="841.956" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eg" x1="827.201" y1="755.936" x2="827.201" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eh" x1="812.445" y1="755.936" x2="812.445" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ei" x1="797.689" y1="755.936" x2="797.689" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ej" x1="782.934" y1="755.936" x2="782.934" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ek" x1="768.178" y1="755.936" x2="768.178" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="el" x1="753.423" y1="755.936" x2="753.423" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="em" x1="738.667" y1="755.936" x2="738.667" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="en" x1="723.912" y1="755.936" x2="723.912" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eo" x1="709.156" y1="755.936" x2="709.156" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ep" x1="694.401" y1="755.936" x2="694.401" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eq" x1="679.645" y1="755.936" x2="679.645" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="er" x1="664.89" y1="755.936" x2="664.89" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="es" x1="650.134" y1="755.936" x2="650.134" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="et" x1="635.379" y1="755.936" x2="635.379" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="eu" x1="620.623" y1="755.936" x2="620.623" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ev" x1="605.868" y1="755.936" x2="605.868" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ew" x1="591.112" y1="755.936" x2="591.112" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ex" x1="576.357" y1="755.936" x2="576.357" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ey" x1="561.601" y1="755.936" x2="561.601" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ez" x1="546.846" y1="755.936" x2="546.846" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fa" x1="532.09" y1="755.936" x2="532.09" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fb" x1="517.335" y1="755.936" x2="517.335" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fc" x1="502.579" y1="755.936" x2="502.579" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fd" x1="487.824" y1="755.936" x2="487.824" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fe" x1="473.068" y1="755.936" x2="473.068" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ff" x1="458.313" y1="755.936" x2="458.313" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fg" x1="443.557" y1="755.936" x2="443.557" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fh" x1="428.802" y1="755.936" x2="428.802" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fi" x1="414.046" y1="755.936" x2="414.046" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fj" x1="399.291" y1="755.936" x2="399.291" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fk" x1="384.535" y1="755.936" x2="384.535" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fl" x1="369.78" y1="755.936" x2="369.78" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fm" x1="355.024" y1="755.936" x2="355.024" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fn" x1="340.269" y1="755.936" x2="340.269" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fo" x1="325.513" y1="755.936" x2="325.513" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fp" x1="310.758" y1="755.936" x2="310.758" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fq" x1="296.002" y1="755.936" x2="296.002" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fr" x1="281.247" y1="755.936" x2="281.247" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fs" x1="266.491" y1="755.936" x2="266.491" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ft" x1="251.736" y1="755.936" x2="251.736" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fu" x1="236.98" y1="755.936" x2="236.98" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fv" x1="222.224" y1="755.936" x2="222.224" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fw" x1="207.469" y1="755.936" x2="207.469" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fx" x1="192.713" y1="755.936" x2="192.713" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fy" x1="177.958" y1="755.936" x2="177.958" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="fz" x1="163.202" y1="755.936" x2="163.202" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ga" x1="148.447" y1="755.936" x2="148.447" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="gb" x1="133.691" y1="755.936" x2="133.691" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="gc" x1="118.936" y1="755.936" x2="118.936" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="gd" x1="104.18" y1="755.936" x2="104.18" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="ge" x1="89.425" y1="755.936" x2="89.425" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="gf" x1="74.669" y1="755.936" x2="74.669" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+    <linearGradient id="gg" x1="59.914" y1="755.936" x2="59.914" y2="277.655" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#d"/>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g>
+      <g>
+        <rect width="1920" height="1080"/>
+        <g>
+          <line x1="1860.086" y1="980.742" x2="59.915" y2="980.742" fill="none" opacity="0" stroke="url(#d)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="965.776" x2="59.915" y2="965.776" fill="none" opacity=".032" stroke="url(#e)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="950.81" x2="59.915" y2="950.81" fill="none" opacity=".065" stroke="url(#f)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="935.844" x2="59.915" y2="935.844" fill="none" opacity=".097" stroke="url(#g)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="920.878" x2="59.915" y2="920.878" fill="none" opacity=".129" stroke="url(#h)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="905.912" x2="59.915" y2="905.912" fill="none" opacity=".161" stroke="url(#i)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="890.946" x2="59.915" y2="890.946" fill="none" opacity=".194" stroke="url(#j)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="875.98" x2="59.915" y2="875.98" fill="none" opacity=".226" stroke="url(#k)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="861.014" x2="59.915" y2="861.014" fill="none" opacity=".258" stroke="url(#l)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="846.048" x2="59.915" y2="846.048" fill="none" opacity=".29" stroke="url(#m)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="831.082" x2="59.915" y2="831.082" fill="none" opacity=".323" stroke="url(#n)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="816.116" x2="59.915" y2="816.116" fill="none" opacity=".355" stroke="url(#o)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="801.15" x2="59.915" y2="801.15" fill="none" opacity=".387" stroke="url(#p)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="786.184" x2="59.915" y2="786.184" fill="none" opacity=".419" stroke="url(#q)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="771.218" x2="59.915" y2="771.218" fill="none" opacity=".452" stroke="url(#r)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="756.252" x2="59.915" y2="756.252" fill="none" opacity=".484" stroke="url(#s)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="741.286" x2="59.915" y2="741.286" fill="none" opacity=".516" stroke="url(#t)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="726.32" x2="59.915" y2="726.32" fill="none" opacity=".548" stroke="url(#u)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="711.354" x2="59.915" y2="711.354" fill="none" opacity=".581" stroke="url(#v)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="696.388" x2="59.915" y2="696.387" fill="none" opacity=".613" stroke="url(#w)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.086" y1="681.422" x2="59.915" y2="681.421" fill="none" opacity=".645" stroke="url(#x)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="666.456" x2="59.914" y2="666.455" fill="none" opacity=".677" stroke="url(#y)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="651.49" x2="59.914" y2="651.489" fill="none" opacity=".71" stroke="url(#z)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="636.524" x2="59.914" y2="636.523" fill="none" opacity=".742" stroke="url(#aa)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="621.558" x2="59.914" y2="621.557" fill="none" opacity=".774" stroke="url(#ab)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="606.592" x2="59.914" y2="606.591" fill="none" opacity=".806" stroke="url(#ac)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="591.626" x2="59.914" y2="591.625" fill="none" opacity=".839" stroke="url(#ad)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="576.66" x2="59.914" y2="576.659" fill="none" opacity=".871" stroke="url(#ae)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="561.694" x2="59.914" y2="561.693" fill="none" opacity=".903" stroke="url(#af)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="546.728" x2="59.914" y2="546.727" fill="none" opacity=".935" stroke="url(#ag)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="531.762" x2="59.914" y2="531.761" fill="none" opacity=".968" stroke="url(#ah)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="516.796" x2="59.914" y2="516.795" fill="none" stroke="url(#ai)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="501.83" x2="59.914" y2="501.829" fill="none" opacity=".968" stroke="url(#aj)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="486.864" x2="59.914" y2="486.863" fill="none" opacity=".935" stroke="url(#ak)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="471.898" x2="59.914" y2="471.897" fill="none" opacity=".903" stroke="url(#al)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="456.932" x2="59.914" y2="456.931" fill="none" opacity=".871" stroke="url(#am)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="441.966" x2="59.914" y2="441.965" fill="none" opacity=".839" stroke="url(#an)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="427" x2="59.914" y2="426.999" fill="none" opacity=".806" stroke="url(#ao)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="412.034" x2="59.914" y2="412.033" fill="none" opacity=".774" stroke="url(#ap)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="397.068" x2="59.914" y2="397.067" fill="none" opacity=".742" stroke="url(#aq)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="382.101" x2="59.914" y2="382.101" fill="none" opacity=".71" stroke="url(#ar)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="367.135" x2="59.914" y2="367.135" fill="none" opacity=".677" stroke="url(#as)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="352.169" x2="59.914" y2="352.169" fill="none" opacity=".645" stroke="url(#at)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="337.203" x2="59.914" y2="337.203" fill="none" opacity=".613" stroke="url(#au)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="322.237" x2="59.914" y2="322.237" fill="none" opacity=".581" stroke="url(#av)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="307.271" x2="59.914" y2="307.271" fill="none" opacity=".548" stroke="url(#aw)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="292.305" x2="59.914" y2="292.305" fill="none" opacity=".516" stroke="url(#ax)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="277.339" x2="59.914" y2="277.339" fill="none" opacity=".484" stroke="url(#ay)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="262.373" x2="59.914" y2="262.373" fill="none" opacity=".452" stroke="url(#az)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="247.407" x2="59.914" y2="247.407" fill="none" opacity=".419" stroke="url(#ba)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="232.441" x2="59.914" y2="232.441" fill="none" opacity=".387" stroke="url(#bb)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="217.475" x2="59.914" y2="217.475" fill="none" opacity=".355" stroke="url(#bc)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="202.509" x2="59.914" y2="202.509" fill="none" opacity=".323" stroke="url(#bd)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="187.543" x2="59.914" y2="187.543" fill="none" opacity=".29" stroke="url(#be)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="172.577" x2="59.914" y2="172.577" fill="none" opacity=".258" stroke="url(#bf)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="157.611" x2="59.914" y2="157.611" fill="none" opacity=".226" stroke="url(#bg)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="142.645" x2="59.914" y2="142.645" fill="none" opacity=".194" stroke="url(#bh)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="127.679" x2="59.914" y2="127.679" fill="none" opacity=".161" stroke="url(#bi)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="112.713" x2="59.914" y2="112.713" fill="none" opacity=".129" stroke="url(#bj)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="97.747" x2="59.914" y2="97.747" fill="none" opacity=".097" stroke="url(#bk)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="82.781" x2="59.914" y2="82.781" fill="none" opacity=".065" stroke="url(#bl)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="67.815" x2="59.914" y2="67.815" fill="none" opacity=".032" stroke="url(#bm)" stroke-miterlimit="10" stroke-width=".75"/>
+          <line x1="1860.085" y1="52.849" x2="59.914" y2="52.849" fill="none" opacity="0" stroke="url(#bn)" stroke-miterlimit="10" stroke-width=".75"/>
+        </g>
+      </g>
+      <g>
+        <line x1="1860.087" y1="277.655" x2="1860.086" y2="755.936" fill="none" opacity="0" stroke="url(#bo)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1845.331" y1="277.655" x2="1845.331" y2="755.936" fill="none" opacity=".016" stroke="url(#bp)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1830.576" y1="277.655" x2="1830.575" y2="755.936" fill="none" opacity=".033" stroke="url(#bq)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1815.82" y1="277.655" x2="1815.819" y2="755.936" fill="none" opacity=".049" stroke="url(#br)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1801.065" y1="277.655" x2="1801.064" y2="755.936" fill="none" opacity=".066" stroke="url(#bs)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1786.309" y1="277.655" x2="1786.308" y2="755.936" fill="none" opacity=".082" stroke="url(#bt)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1771.554" y1="277.655" x2="1771.553" y2="755.936" fill="none" opacity=".098" stroke="url(#bu)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1756.798" y1="277.655" x2="1756.797" y2="755.936" fill="none" opacity=".115" stroke="url(#bv)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1742.043" y1="277.655" x2="1742.042" y2="755.936" fill="none" opacity=".131" stroke="url(#bw)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1727.287" y1="277.655" x2="1727.286" y2="755.936" fill="none" opacity=".148" stroke="url(#bx)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1712.532" y1="277.655" x2="1712.531" y2="755.936" fill="none" opacity=".164" stroke="url(#by)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1697.776" y1="277.655" x2="1697.775" y2="755.936" fill="none" opacity=".18" stroke="url(#bz)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1683.021" y1="277.655" x2="1683.02" y2="755.936" fill="none" opacity=".197" stroke="url(#ca)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1668.265" y1="277.655" x2="1668.264" y2="755.936" fill="none" opacity=".213" stroke="url(#cb)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1653.51" y1="277.655" x2="1653.509" y2="755.936" fill="none" opacity=".23" stroke="url(#cc)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1638.754" y1="277.655" x2="1638.753" y2="755.936" fill="none" opacity=".246" stroke="url(#cd)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1623.999" y1="277.655" x2="1623.998" y2="755.936" fill="none" opacity=".262" stroke="url(#ce)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1609.243" y1="277.655" x2="1609.242" y2="755.936" fill="none" opacity=".279" stroke="url(#cf)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1594.488" y1="277.655" x2="1594.487" y2="755.936" fill="none" opacity=".295" stroke="url(#cg)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1579.732" y1="277.655" x2="1579.731" y2="755.936" fill="none" opacity=".311" stroke="url(#ch)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1564.977" y1="277.655" x2="1564.976" y2="755.936" fill="none" opacity=".328" stroke="url(#ci)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1550.221" y1="277.655" x2="1550.22" y2="755.936" fill="none" opacity=".344" stroke="url(#cj)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1535.466" y1="277.655" x2="1535.465" y2="755.936" fill="none" opacity=".361" stroke="url(#ck)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1520.71" y1="277.655" x2="1520.709" y2="755.936" fill="none" opacity=".377" stroke="url(#cl)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1505.955" y1="277.655" x2="1505.954" y2="755.936" fill="none" opacity=".393" stroke="url(#cm)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1491.199" y1="277.655" x2="1491.198" y2="755.936" fill="none" opacity=".41" stroke="url(#cn)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1476.443" y1="277.655" x2="1476.443" y2="755.936" fill="none" opacity=".426" stroke="url(#co)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1461.688" y1="277.655" x2="1461.687" y2="755.936" fill="none" opacity=".443" stroke="url(#cp)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1446.932" y1="277.655" x2="1446.932" y2="755.936" fill="none" opacity=".459" stroke="url(#cq)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1432.177" y1="277.655" x2="1432.176" y2="755.936" fill="none" opacity=".475" stroke="url(#cr)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1417.421" y1="277.655" x2="1417.421" y2="755.936" fill="none" opacity=".492" stroke="url(#cs)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1402.666" y1="277.655" x2="1402.665" y2="755.936" fill="none" opacity=".508" stroke="url(#ct)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1387.91" y1="277.655" x2="1387.91" y2="755.936" fill="none" opacity=".525" stroke="url(#cu)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1373.155" y1="277.655" x2="1373.154" y2="755.936" fill="none" opacity=".541" stroke="url(#cv)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1358.399" y1="277.655" x2="1358.399" y2="755.936" fill="none" opacity=".557" stroke="url(#cw)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1343.644" y1="277.655" x2="1343.643" y2="755.936" fill="none" opacity=".574" stroke="url(#cx)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1328.888" y1="277.655" x2="1328.888" y2="755.936" fill="none" opacity=".59" stroke="url(#cy)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1314.133" y1="277.655" x2="1314.132" y2="755.936" fill="none" opacity=".607" stroke="url(#cz)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1299.377" y1="277.655" x2="1299.377" y2="755.936" fill="none" opacity=".623" stroke="url(#da)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1284.622" y1="277.655" x2="1284.621" y2="755.936" fill="none" opacity=".639" stroke="url(#db)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1269.866" y1="277.655" x2="1269.865" y2="755.936" fill="none" opacity=".656" stroke="url(#dc)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1255.111" y1="277.655" x2="1255.11" y2="755.936" fill="none" opacity=".672" stroke="url(#dd)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1240.355" y1="277.655" x2="1240.354" y2="755.936" fill="none" opacity=".689" stroke="url(#de)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1225.6" y1="277.655" x2="1225.599" y2="755.936" fill="none" opacity=".705" stroke="url(#df)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1210.844" y1="277.655" x2="1210.843" y2="755.936" fill="none" opacity=".721" stroke="url(#dg)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1196.089" y1="277.655" x2="1196.088" y2="755.936" fill="none" opacity=".738" stroke="url(#dh)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1181.333" y1="277.655" x2="1181.332" y2="755.936" fill="none" opacity=".754" stroke="url(#di)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1166.578" y1="277.655" x2="1166.577" y2="755.936" fill="none" opacity=".77" stroke="url(#dj)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1151.822" y1="277.655" x2="1151.821" y2="755.936" fill="none" opacity=".787" stroke="url(#dk)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1137.067" y1="277.655" x2="1137.066" y2="755.936" fill="none" opacity=".803" stroke="url(#dl)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1122.311" y1="277.655" x2="1122.31" y2="755.936" fill="none" opacity=".82" stroke="url(#dm)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1107.556" y1="277.655" x2="1107.555" y2="755.936" fill="none" opacity=".836" stroke="url(#dn)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1092.8" y1="277.655" x2="1092.799" y2="755.936" fill="none" opacity=".852" stroke="url(#do)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1078.045" y1="277.655" x2="1078.044" y2="755.936" fill="none" opacity=".869" stroke="url(#dp)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1063.289" y1="277.655" x2="1063.288" y2="755.936" fill="none" opacity=".885" stroke="url(#dq)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1048.534" y1="277.655" x2="1048.533" y2="755.936" fill="none" opacity=".902" stroke="url(#dr)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1033.778" y1="277.655" x2="1033.777" y2="755.936" fill="none" opacity=".918" stroke="url(#ds)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1019.023" y1="277.655" x2="1019.022" y2="755.936" fill="none" opacity=".934" stroke="url(#dt)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="1004.267" y1="277.655" x2="1004.266" y2="755.936" fill="none" opacity=".951" stroke="url(#du)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="989.512" y1="277.655" x2="989.511" y2="755.936" fill="none" opacity=".967" stroke="url(#dv)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="974.756" y1="277.655" x2="974.755" y2="755.936" fill="none" opacity=".984" stroke="url(#dw)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="960.001" y1="277.655" x2="960" y2="755.936" fill="none" stroke="url(#dx)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="945.245" y1="277.655" x2="945.244" y2="755.936" fill="none" opacity=".984" stroke="url(#dy)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="930.49" y1="277.655" x2="930.489" y2="755.936" fill="none" opacity=".967" stroke="url(#dz)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="915.734" y1="277.655" x2="915.733" y2="755.936" fill="none" opacity=".951" stroke="url(#ea)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="900.978" y1="277.655" x2="900.978" y2="755.936" fill="none" opacity=".934" stroke="url(#eb)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="886.223" y1="277.655" x2="886.222" y2="755.936" fill="none" opacity=".918" stroke="url(#ec)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="871.467" y1="277.655" x2="871.467" y2="755.936" fill="none" opacity=".902" stroke="url(#ed)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="856.712" y1="277.655" x2="856.711" y2="755.936" fill="none" opacity=".885" stroke="url(#ee)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="841.956" y1="277.655" x2="841.956" y2="755.936" fill="none" opacity=".869" stroke="url(#ef)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="827.201" y1="277.655" x2="827.2" y2="755.936" fill="none" opacity=".852" stroke="url(#eg)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="812.445" y1="277.655" x2="812.445" y2="755.936" fill="none" opacity=".836" stroke="url(#eh)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="797.69" y1="277.655" x2="797.689" y2="755.936" fill="none" opacity=".82" stroke="url(#ei)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="782.934" y1="277.655" x2="782.934" y2="755.936" fill="none" opacity=".803" stroke="url(#ej)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="768.179" y1="277.655" x2="768.178" y2="755.936" fill="none" opacity=".787" stroke="url(#ek)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="753.423" y1="277.655" x2="753.423" y2="755.936" fill="none" opacity=".77" stroke="url(#el)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="738.668" y1="277.655" x2="738.667" y2="755.936" fill="none" opacity=".754" stroke="url(#em)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="723.912" y1="277.655" x2="723.912" y2="755.936" fill="none" opacity=".738" stroke="url(#en)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="709.157" y1="277.655" x2="709.156" y2="755.936" fill="none" opacity=".721" stroke="url(#eo)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="694.401" y1="277.655" x2="694.4" y2="755.936" fill="none" opacity=".705" stroke="url(#ep)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="679.646" y1="277.655" x2="679.645" y2="755.936" fill="none" opacity=".689" stroke="url(#eq)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="664.89" y1="277.655" x2="664.889" y2="755.936" fill="none" opacity=".672" stroke="url(#er)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="650.135" y1="277.655" x2="650.134" y2="755.936" fill="none" opacity=".656" stroke="url(#es)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="635.379" y1="277.655" x2="635.378" y2="755.936" fill="none" opacity=".639" stroke="url(#et)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="620.624" y1="277.655" x2="620.623" y2="755.936" fill="none" opacity=".623" stroke="url(#eu)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="605.868" y1="277.655" x2="605.867" y2="755.936" fill="none" opacity=".607" stroke="url(#ev)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="591.113" y1="277.655" x2="591.112" y2="755.936" fill="none" opacity=".59" stroke="url(#ew)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="576.357" y1="277.655" x2="576.356" y2="755.936" fill="none" opacity=".574" stroke="url(#ex)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="561.602" y1="277.655" x2="561.601" y2="755.936" fill="none" opacity=".557" stroke="url(#ey)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="546.846" y1="277.655" x2="546.845" y2="755.936" fill="none" opacity=".541" stroke="url(#ez)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="532.091" y1="277.655" x2="532.09" y2="755.936" fill="none" opacity=".525" stroke="url(#fa)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="517.335" y1="277.655" x2="517.334" y2="755.936" fill="none" opacity=".508" stroke="url(#fb)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="502.58" y1="277.655" x2="502.579" y2="755.936" fill="none" opacity=".492" stroke="url(#fc)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="487.824" y1="277.655" x2="487.823" y2="755.936" fill="none" opacity=".475" stroke="url(#fd)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="473.069" y1="277.655" x2="473.068" y2="755.936" fill="none" opacity=".459" stroke="url(#fe)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="458.313" y1="277.655" x2="458.312" y2="755.936" fill="none" opacity=".443" stroke="url(#ff)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="443.558" y1="277.655" x2="443.557" y2="755.936" fill="none" opacity=".426" stroke="url(#fg)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="428.802" y1="277.655" x2="428.801" y2="755.936" fill="none" opacity=".41" stroke="url(#fh)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="414.047" y1="277.655" x2="414.046" y2="755.936" fill="none" opacity=".393" stroke="url(#fi)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="399.291" y1="277.655" x2="399.29" y2="755.936" fill="none" opacity=".377" stroke="url(#fj)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="384.536" y1="277.655" x2="384.535" y2="755.936" fill="none" opacity=".361" stroke="url(#fk)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="369.78" y1="277.655" x2="369.779" y2="755.936" fill="none" opacity=".344" stroke="url(#fl)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="355.025" y1="277.655" x2="355.024" y2="755.936" fill="none" opacity=".328" stroke="url(#fm)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="340.269" y1="277.655" x2="340.268" y2="755.936" fill="none" opacity=".311" stroke="url(#fn)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="325.513" y1="277.655" x2="325.513" y2="755.936" fill="none" opacity=".295" stroke="url(#fo)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="310.758" y1="277.655" x2="310.757" y2="755.936" fill="none" opacity=".279" stroke="url(#fp)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="296.002" y1="277.655" x2="296.002" y2="755.936" fill="none" opacity=".262" stroke="url(#fq)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="281.247" y1="277.655" x2="281.246" y2="755.936" fill="none" opacity=".246" stroke="url(#fr)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="266.491" y1="277.655" x2="266.491" y2="755.936" fill="none" opacity=".23" stroke="url(#fs)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="251.736" y1="277.655" x2="251.735" y2="755.936" fill="none" opacity=".213" stroke="url(#ft)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="236.98" y1="277.655" x2="236.98" y2="755.936" fill="none" opacity=".197" stroke="url(#fu)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="222.225" y1="277.655" x2="222.224" y2="755.936" fill="none" opacity=".18" stroke="url(#fv)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="207.469" y1="277.655" x2="207.469" y2="755.936" fill="none" opacity=".164" stroke="url(#fw)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="192.714" y1="277.655" x2="192.713" y2="755.936" fill="none" opacity=".148" stroke="url(#fx)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="177.958" y1="277.655" x2="177.958" y2="755.936" fill="none" opacity=".131" stroke="url(#fy)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="163.203" y1="277.655" x2="163.202" y2="755.936" fill="none" opacity=".115" stroke="url(#fz)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="148.447" y1="277.655" x2="148.447" y2="755.936" fill="none" opacity=".098" stroke="url(#ga)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="133.692" y1="277.655" x2="133.691" y2="755.936" fill="none" opacity=".082" stroke="url(#gb)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="118.936" y1="277.655" x2="118.935" y2="755.936" fill="none" opacity=".066" stroke="url(#gc)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="104.181" y1="277.655" x2="104.18" y2="755.936" fill="none" opacity=".049" stroke="url(#gd)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="89.425" y1="277.655" x2="89.424" y2="755.936" fill="none" opacity=".033" stroke="url(#ge)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="74.67" y1="277.655" x2="74.669" y2="755.936" fill="none" opacity=".016" stroke="url(#gf)" stroke-miterlimit="10" stroke-width=".75"/>
+        <line x1="59.914" y1="277.655" x2="59.913" y2="755.936" fill="none" opacity="0" stroke="url(#gg)" stroke-miterlimit="10" stroke-width=".75"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+    <div class="sigil-strip" aria-label="Theme glyph selector">
+      <button class="sigil-theme-button theme-ex is-active" type="button" data-theme="#ff101a" data-rgb="255,16,26" title="EX" aria-label="Theme EX"><img src="assets/theme-icons/ex.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#d8381c" data-rgb="216,56,28" title="SEMPI" aria-label="Theme SEMPI"><img src="assets/theme-icons/sempi.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#e600ff" data-rgb="230,0,255" title="DIABOLIK" aria-label="Theme DIABOLIK"><img src="assets/theme-icons/diabolik.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#dfcb0a" data-rgb="223,203,10" title="LAST" aria-label="Theme LAST"><img src="assets/theme-icons/last.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#ff6700" data-rgb="255,103,0" title="COMPENDIUM" aria-label="Theme COMPENDIUM"><img src="assets/theme-icons/compendium.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#8bef00" data-rgb="139,239,0" title="CROWS" aria-label="Theme CROWS"><img src="assets/theme-icons/crows.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#00efb6" data-rgb="0,239,182" title="PLAGUELANDS" aria-label="Theme PLAGUELANDS"><img src="assets/theme-icons/plaguelands.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#dddddd" data-rgb="221,221,221" title="NIHILO" aria-label="Theme NIHILO"><img src="assets/theme-icons/nihilo.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#00b6e0" data-rgb="0,182,224" title="COGITO" aria-label="Theme COGITO"><img src="assets/theme-icons/cogito.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#f9318c" data-rgb="249,49,140" title="MUNDO INVISIVEL" aria-label="Theme MUNDO INVISIVEL"><img src="assets/theme-icons/mundo-invisivel.svg" alt=""></button>
+      <button class="sigil-theme-button" type="button" data-theme="#5800ff" data-rgb="88,0,255" title="ARS" aria-label="Theme ARS"><img src="assets/theme-icons/ars.svg" alt=""></button>
+    </div>
+
+    <section class="desktop-icons" aria-label="Desktop icons">
+      <button class="desktop-icon" data-open="welcome" style="left:0px;top:0px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <ellipse cx="29.619" cy="29.619" rx="23.078" ry="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <ellipse cx="29.619" cy="29.619" rx="11.706" ry="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="29.619" x2="58.239" y2="29.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="3.418" y1="18.092" x2="55.823" y2="18.092" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="8.653" y1="10.088" x2="50.587" y2="10.088" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="8.653" y1="49.151" x2="50.587" y2="49.151" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="3.418" y1="41.146" x2="55.823" y2="41.146" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>About_EX</span></button>
+      <button class="desktop-icon" data-open="games" style="left:104px;top:0px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.234" viewBox="0 0 59.239 59.234">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <path d="M29.662,14.047h0c-5.095-5.095-7.952-7.952-13.047-13.047H1.005v57.234h57.234V14.047h-28.576Z" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M1.005,58.234L11.056,20.877h47.183v37.357s-57.863,0-57.234,0Z" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.601" y1="30.769" x2="52.509" y2="30.769" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.601" y1="35.335" x2="52.509" y2="35.335" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.601" y1="39.901" x2="52.509" y2="39.901" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.601" y1="44.467" x2="52.509" y2="44.467" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.601" y1="49.033" x2="52.509" y2="49.033" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>Games</span></button>
+      <button class="desktop-icon" data-open="press" style="left:0px;top:88px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="64.655" height="64.655" viewBox="0 0 64.655 64.655">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <path d="M54.876,63.655H9.779V1h28.659c6.419,6.419,10.018,10.018,16.438,16.438v46.217Z" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="24.407" width="62.655" height="22.089" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <polyline points="54.876 17.415 38.387 17.415 38.387 1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x=".995" y="24.407" width="62.66" height="21.125" fill="none"/>
+        <path d="M14.325,42.589c-.693,0-1.187-.147-1.48-.44-.293-.293-.44-.653-.44-1.08v-.6c0-.427.146-.787.44-1.08.293-.293.787-.44,1.48-.44s1.187.147,1.48.44.44.653.44,1.08v.6c0,.427-.147.787-.44,1.08-.293.293-.787.44-1.48.44Z" fill="currentColor"/>
+        <path d="M31.365,42.369h-10.08v-2.3l6.94-9.5h-6.7v-2.16h9.58v2.3l-6.92,9.5h7.18v2.16Z" fill="currentColor"/>
+        <path d="M33.885,42.369v-1.96h3.14v-10.04h-3.14v-1.96h8.88v1.96h-3.14v10.04h3.14v1.96h-8.88Z" fill="currentColor"/>
+        <path d="M45.925,42.369v-13.96h5.3c1.36,0,2.4.386,3.12,1.158s1.08,1.823,1.08,3.153-.36,2.381-1.08,3.152-1.76,1.157-3.12,1.157h-2.68v5.34h-2.62ZM48.545,34.909h2.14c.707,0,1.213-.144,1.52-.432s.46-.747.46-1.376v-.764c0-.629-.153-1.087-.46-1.375-.307-.289-.813-.433-1.52-.433h-2.14v4.38Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg><span>Press_Kit</span></button>
+      <button class="desktop-icon" data-open="contact" style="left:104px;top:88px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="64.66" height="64.66" viewBox="0 0 64.66 64.66">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="1" width="62.66" height="45.1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="59.046" width="62.66" height="4.614" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="50.266" width="62.66" height="4.614" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <polygon points="63.66 46.1 32.33 17.622 1 46.1 63.66 46.1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <polygon points="1 1 32.33 29.478 63.66 1 1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>Contact</span></button>
+      <button class="desktop-icon" data-open="terminal" style="left:0px;top:176px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="64.66" height="64.66" viewBox="0 0 64.66 64.66">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <path d="M53.909,1H10.751C6.943,4.808,4.808,6.943,1,10.751v43.158l9.751,9.751h43.158l9.751-9.751V10.751c-3.808-3.808-5.943-5.943-9.751-9.751Z" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="17.121" width="62.66" height="30.419" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x="1" y="19.126" width="62.66" height="26.409" fill="none"/>
+        <path d="M14.69,39.97c-1.827,0-3.177-.626-4.05-1.88-.874-1.253-1.31-3.033-1.31-5.34,0-2.293.437-4.07,1.31-5.33.873-1.26,2.223-1.89,4.05-1.89.693,0,1.303.093,1.83.277.527.185.983.439,1.37.763.387.324.707.715.96,1.173.253.458.453.96.6,1.507l-2.4.68c-.094-.32-.2-.62-.32-.9s-.27-.523-.45-.73c-.18-.207-.404-.367-.67-.48s-.586-.17-.96-.17c-.907,0-1.557.348-1.95,1.044-.394.696-.59,1.646-.59,2.852v2.409c0,1.205.197,2.155.59,2.851.393.696,1.043,1.044,1.95,1.044.374,0,.693-.057.96-.17.267-.113.49-.273.67-.48.18-.207.33-.45.45-.73s.227-.58.32-.9l2.4.68c-.147.547-.347,1.049-.6,1.507-.253.458-.573.849-.96,1.173s-.843.578-1.37.763c-.527.185-1.137.277-1.83.277Z" fill="currentColor"/>
+        <path d="M26.33,32.85c-.693,0-1.187-.147-1.48-.44-.293-.293-.44-.653-.44-1.08v-.6c0-.427.146-.787.44-1.08.293-.293.787-.44,1.48-.44s1.187.147,1.48.44c.293.293.44.653.44,1.08v.6c0,.427-.147.787-.44,1.08s-.787.44-1.48.44ZM26.33,39.95c-.693,0-1.187-.146-1.48-.44-.293-.293-.44-.653-.44-1.08v-.6c0-.427.146-.786.44-1.08.293-.293.787-.439,1.48-.439s1.187.146,1.48.439c.293.294.44.653.44,1.08v.6c0,.427-.147.787-.44,1.08-.293.293-.787.44-1.48.44Z" fill="currentColor"/>
+        <path d="M40.47,42.49l-6.58-17.96h2.3l6.58,17.96h-2.3Z" fill="currentColor"/>
+        <path d="M46.03,37.11l6.28-3.4v-.16l-6.28-3.4v-2.44l8.6,4.72v2.4l-8.6,4.72v-2.44Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg><span>Terminal</span></button>
+      <button class="desktop-icon" data-open="chartpaint" style="left:104px;top:176px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="46.791" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="20.08" y="46.791" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="39.159" y="46.791" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="35.343" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="20.08" y="35.343" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="39.159" y="35.343" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="23.896" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="39.159" y="23.896" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="39.159" y="12.448" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="39.159" y="1" width="19.08" height="11.448" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>ChartPaint</span></button>
+      <button class="desktop-icon" data-open="effecto" style="left:0px;top:264px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="10.339" y="10.339" width="38.562" height="38.562" transform="translate(29.619 -12.269) rotate(45)" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x="1" y="1.061" width="57.239" height="57.177" fill="none"/>
+        <path d="M19.12,35.05h3.16v-6.32h-3.36v-2h3.36v-1.68c0-.413.057-.79.17-1.13s.29-.633.53-.88c.24-.247.543-.44.91-.58.367-.14.796-.21,1.29-.21h3.48v2h-3.82v2.48h3.82v2h-3.82v6.32h3.36v2h-9.08v-2Z" fill="currentColor"/>
+        <path d="M30.3,37.05l3.86-5.24-3.64-5.08h2.94l1.24,1.82.96,1.44h.14l.96-1.44,1.24-1.82h2.72l-3.64,4.96,3.86,5.36h-2.96l-1.42-2.08-.98-1.46h-.14l-.98,1.46-1.42,2.08h-2.74Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg><span>Noise Applier</span></button>
+      <button class="desktop-icon" data-open="ascii" style="left:104px;top:264px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="1" width="57.239" height="57.239" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x="9.29" y="19.783" width="42.895" height="38.425" fill="none"/>
+        <path d="M18.27,46.395l-.98-3.56h-4.14l-.96,3.56h-2.64l3.92-13.96h3.64l3.94,13.96h-2.78ZM15.31,35.015h-.16l-1.54,5.7h3.24l-1.54-5.7Z" fill="currentColor"/>
+        <path d="M25.01,35.515l-1.8-1.22,2.34-3.12-3.58-1.22.66-2,3.54,1.24v-3.78h2.24v3.78l3.54-1.24.66,2-3.58,1.22,2.34,3.12-1.8,1.22-2.28-3.12-2.28,3.12Z" fill="currentColor"/>
+      </g>
+      <line x1="9.29" y1="50.963" x2="28.49" y2="50.963" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>ASCII Maker</span></button>
+      <button class="desktop-icon" data-open="dither" style="left:0px;top:352px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="1" width="57.239" height="57.239" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="10.137" y="10.137" width="38.965" height="38.965" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="10.137" y1="10.137" x2="10.137" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="15.704" y1="10.137" x2="15.704" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="21.27" y1="10.137" x2="21.27" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.836" y1="10.137" x2="26.836" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="32.403" y1="10.137" x2="32.403" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="37.969" y1="10.137" x2="37.969" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="43.535" y1="10.137" x2="43.535" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="10.137" x2="49.102" y2="1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="10.137" y1="58.239" x2="10.137" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="15.704" y1="58.239" x2="15.704" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="21.27" y1="58.239" x2="21.27" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="26.836" y1="58.239" x2="26.836" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="32.403" y1="58.239" x2="32.403" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="37.969" y1="58.239" x2="37.969" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="43.535" y1="58.239" x2="43.535" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="58.239" x2="49.102" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="10.137" x2="58.239" y2="10.137" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="15.704" x2="58.239" y2="15.703" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="21.27" x2="58.239" y2="21.27" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="26.836" x2="58.239" y2="26.836" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="32.403" x2="58.239" y2="32.403" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="37.969" x2="58.239" y2="37.969" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="43.535" x2="58.239" y2="43.535" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="49.102" y1="49.102" x2="58.239" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="10.137" x2="10.137" y2="10.137" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="15.704" x2="10.137" y2="15.704" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="21.27" x2="10.137" y2="21.27" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="26.836" x2="10.137" y2="26.836" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="32.403" x2="10.137" y2="32.403" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="37.969" x2="10.137" y2="37.969" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="43.535" x2="10.137" y2="43.535" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="49.102" x2="10.137" y2="49.102" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>Dither</span></button>
+      <button class="desktop-icon" data-open="kaleido" style="left:104px;top:352px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="29.619" cy="29.619" r="19.08" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="29.619" cy="29.619" r="9.54" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>Sigil Paths</span></button>
+      <button class="desktop-icon" data-open="pixelrain" style="left:0px;top:440px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="1" width="57.239" height="57.239" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <rect x="12.609" y="9.288" width="6.865" height="23.533" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+        <rect x="24.518" y="26.418" width="6.865" height="23.533" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+        <rect x="39.765" y="28.534" width="6.865" height="15.222" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+        <rect x="39.765" y="11.684" width="6.865" height="9.938" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg><span>Data Fall</span></button>
+      <button class="desktop-icon" data-open="cursorlab" style="left:104px;top:440px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+      <polygon points="29.619 11.261 18.215 33.403 25.59 33.403 25.59 47.978 29.619 47.978 33.649 47.978 33.649 33.403 41.024 33.403 29.619 11.261" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x1="7.562" y1="11.261" x2="51.677" y2="11.261" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x1="13.416" y1="6.472" x2="45.823" y2="6.472" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg><span>Cursor Lab</span></button>
+      <button class="desktop-icon danger" data-open="secret" style="left:0px;top:528px"><svg class="app-icon-svg" aria-hidden="true" focusable="false" id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="66.119" height="57.261" viewBox="0 0 66.119 57.261">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon points="33.059 2 1.732 56.261 64.387 56.261 33.059 2"/>
+        <g>
+          <polyline points="33.809 3.299 33.059 2 32.309 3.299" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="30.739" y1="6.018" x2="3.267" y2="53.602" fill="none" stroke="currentColor" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+          <polyline points="2.482 54.962 1.732 56.261 3.232 56.261" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="6.372" y1="56.261" x2="61.317" y2="56.261" fill="none" stroke="currentColor" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+          <polyline points="62.887 56.261 64.387 56.261 63.637 54.962" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="62.067" y1="52.242" x2="34.594" y2="4.659" fill="none" stroke="currentColor" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <g>
+        <rect x="7.451" y="21.811" width="51.211" height="26.409" fill="none"/>
+        <path d="M33.057,42.635c-.667,0-1.137-.14-1.41-.42s-.41-.62-.41-1.02v-.56c0-.4.136-.74.41-1.02s.743-.42,1.41-.42,1.137.14,1.41.42c.273.28.41.62.41,1.02v.56c0,.4-.137.74-.41,1.02-.273.28-.744.42-1.41.42ZM32.637,37.595l-.98-5.088v-4.052h2.8v4.052l-.98,5.088h-.84Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg><span>DO_N0T_0PEN!!!</span></button>
+    </section>
+
+    <section id="window-welcome" class="window app-window is-open is-active welcome-window" data-window="welcome" style="left: 230px; top: 85px; width: 70vw; height: 72vh;">
+      <div class="title-bar">
+        <div class="title-bar-text">Welcome_TO_ex.IGNORANTIA.COM</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" data-action="minimize"></button>
+          <button aria-label="Maximize" data-action="maximize"></button>
+          <button aria-label="Close" data-action="close"></button>
+        </div>
+      </div>
+      <div class="window-body website-scroll ex-welcome-body">
+        <section class="ex-pdf-page ex-hero-page">
+          <div class="ex-hero-bg"><img src="assets/welcome/ex-image.svg" alt="" /></div>
+          <img class="ex-main-logo" src="assets/welcome/ex-logo.svg" alt="Ex Ignorantia" />
+          <div class="ex-intro-copy">
+            <p>Ex Ignorantia is a Brazilian indie game studio creating narratives, mechanics &amp; worlds that cross the veil of the impossible.</p>
+            <p>Our tight-knit team of weirdos and nerds builds on top of 6 years of TTRPG production, and carry under our editorial belt 2 physical corebooks and 50+ supplemental digital titles.</p>
+            <p>We’re lean, mean, slightly unhinged: let’s fckn go.</p>
+          </div>
+          <img class="ex-hero-icon" src="assets/welcome/ex-icon.svg" alt="" />
+        </section>
+
+        <section class="ex-pdf-page ex-game-page ex-crows-section">
+          <div class="ex-game-header">
+            <div class="ex-pdf-glyphs" aria-hidden="true"><span class="glyph-box"><img src="assets/theme-icons/sempi.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/diabolik.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/last.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/compendium.svg" alt=""></span><span class="glyph-box active"><img src="assets/theme-icons/crows.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/plaguelands.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/nihilo.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/cogito.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/mundo-invisivel.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/ars.svg" alt=""></span></div>
+            <nav class="ex-game-nav"><span>OUR</span><span>GAMES_</span><span>Crow’s</span><span>Requiem</span></nav>
+          </div>
+          <figure class="ex-game-image"><img src="assets/welcome/crows-image.svg" alt="Crow’s Requiem" /><img class="ex-game-logo crows-logo" src="assets/welcome/crows-logo.svg" alt="Crow’s Requiem logo" /></figure>
+          <div class="ex-game-copy">
+            <p>Crow’s Requiem is a narrative survival game with elements of visual novel, RPG, comics, and puzzles.</p>
+            <p>Explore a Pandemicpunk world of moral dilemmas, manage your resources, watch the virus closely, and try to hold on to your humanity.</p>
+          </div>
+          <img class="ex-center-icon" src="assets/welcome/crows-icon.svg" alt="" />
+          <div class="ex-feature-grid">
+            <article><h3>The_CROWS</h3><p>You belong to a unique caste within the City: the Licensed Body Collectors. That unbinds you from the quarantine that isolates everyone else.</p></article>
+            <article><h3>The_COLLECTION</h3><p>Your training was brief, but you can handle the dead... right? Examine. Seal. Plug. Bag. By the time you finish, another dead body will already be waiting.</p></article>
+          </div>
+          <figure class="ex-wide-still ex-video-embed ex-crows-video-one" aria-label="Crow’s Requiem video 1">
+            <iframe src="https://www.youtube.com/embed/9pt8-tgZ8BI?si=pl9_6QUD40GsIcMc" title="Crow’s Requiem video 1" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </figure>
+          <div class="ex-feature-grid">
+            <article><h3>The_<br>PANDEMICPUNK<br>City</h3><p>Explore New Horizon: temples inside forgotten malls, lawless industrial zones, and military bases of absolute control.</p></article>
+            <article><h3>The_FACTIONS</h3><p>Interact with the Military, Anarchist, and Cultist factions, who divide control over the city. Follow their orders with loyalty, or betray every fool who crosses your path.</p></article>
+          </div>
+          <figure class="ex-wide-still ex-video-embed ex-crows-video-two" aria-label="Crow’s Requiem video 2">
+            <iframe src="https://www.youtube.com/embed/bgAbJZsQYW4?si=kBUVAFHeOFny2ePW" title="Crow’s Requiem video 2" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </figure>
+          <div class="ex-cta-row"><a href="#">Wishlist on Steam</a><a href="#">Follow on Itch.io</a></div>
+        </section>
+
+        <section class="ex-pdf-page ex-game-page ex-last-section">
+          <div class="ex-game-header">
+            <div class="ex-pdf-glyphs" aria-hidden="true"><span class="glyph-box"><img src="assets/theme-icons/sempi.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/diabolik.svg" alt=""></span><span class="glyph-box active yellow"><img src="assets/theme-icons/last.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/compendium.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/crows.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/plaguelands.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/nihilo.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/cogito.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/mundo-invisivel.svg" alt=""></span><span class="glyph-box"><img src="assets/theme-icons/ars.svg" alt=""></span></div>
+            <nav class="ex-game-nav"><span>OUR</span><span>GAMES_</span><span>Last Round</span><span>at the End</span></nav>
+          </div>
+          <figure class="ex-game-image"><img src="assets/welcome/last-image.svg" alt="Last Round at the End of the World" /><img class="ex-game-logo last-logo" src="assets/welcome/last-logo.svg" alt="Last Round logo" /></figure>
+          <div class="ex-game-copy">
+            <p>Last Round at the End of the World is a folk-horror narrative puzzle game where you interpret divine messages, question characters, and choose who must die to keep an island alive.</p>
+            <p>Instead of fearing the sacrifice, like in The Wicker Man and Midsommar, this time, you are the Adjudicator.</p>
+          </div>
+          <img class="ex-center-icon" src="assets/welcome/last-icon.svg" alt="" />
+          <div class="ex-feature-grid">
+            <article><h3>The_RIDDLE</h3><p>Once a year, the Spirit of the Waters speaks: it gives you a poetic riddle pointing to one soul among the villagers. Choose right, and one person drowns so the rest may live. Choose wrong, and the water takes everyone.</p></article>
+            <article><h3>The_Interpretation</h3><p>The Spirit’s words are never direct: a scar, an innocent gesture, an old sin. Every detail may be the key.</p></article>
+            <article><h3>The_VILLAGERS</h3><p>Speak with lovers, drunks, devotees, cowards, and survivors. They all know someone must die, but no one wants to be chosen.</p></article>
+            <article><h3>The_RITUALS</h3><p>Some truths must be earned: gamble at the pub, work in the cemetery, kill in the woods. Rituals and mini-games reveal clues ordinary conversations will not.</p></article>
+          </div>
+          <figure class="ex-wide-still ex-video-embed ex-last-video-one" aria-label="Last Round video">
+            <iframe src="https://www.youtube.com/embed/RpkWzCdlk2o?si=n8X3RgRbN9YBKewg" title="Last Round video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </figure>
+          <div class="ex-feature-grid ex-single-feature">
+            <article><h3>The_SACRIFICE</h3><p>At the end of each year, say a name. Each death changes the village; every correct choice makes you more necessary. And perhaps more monstrous.</p></article>
+          </div>
+          <div class="ex-cta-row"><a href="#">Wishlist on Steam</a><a href="#">Follow on Itch.io</a></div>
+        </section>
+
+        <section class="ex-pdf-page ex-footer-page">
+          <img src="assets/welcome/ex-icon-3d.svg" alt="Ex Ignorantia symbol" />
+        </section>
+      </div>
+    </section>
+
+    <section id="window-about" class="window app-window" data-window="about" style="left: 260px; top: 118px; width: 460px;">
+      <div class="title-bar"><div class="title-bar-text">About_Ex_Ignorantia.txt</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body document"><h2>About_EX</h2><p>Open the Welcome file to read the studio manifesto and current case files.</p></div>
+    </section>
+
+    <section id="window-games" class="window app-window" data-window="games" style="left: 305px; top: 145px; width: 540px;">
+      <div class="title-bar"><div class="title-bar-text">Games</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body explorer"><div class="address">C:\EXOS\GAMES</div><button class="file-item" data-open="welcome">Crow_Requiem.exe</button><button class="file-item" data-open="welcome">Last_Round.exe</button><p>Open a case file to inspect the current Ex Ignorantia catalogue.</p></div>
+    </section>
+
+    <section id="window-press" class="window app-window" data-window="press" style="left: 330px; top: 180px; width: 430px;">
+      <div class="title-bar"><div class="title-bar-text">Press_Kit.ZIP</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body document"><h2>Press_Kit</h2><ul><li>Logo_Pack.zip</li><li>Screenshots</li><li>Trailers</li><li>Fact_Sheet.txt</li></ul><p>Downloadable materials for press, partners and anyone investigating the impossible: studio logos, game visuals, trailers and compact factsheets for the Ex Ignorantia archive.</p></div>
+    </section>
+
+    <section id="window-contact" class="window app-window" data-window="contact" style="left: 455px; top: 360px; width: 480px;">
+      <div class="title-bar"><div class="title-bar-text">Transmission_INBOX</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body contact-box"><h2>_Send a transmission</h2><p>Follow the studio, wishlist our games, or enter the Discord channel to receive strange updates from the Ex Ignorantia archive.</p><div class="button-row contact-links"><a href="https://store.steampowered.com/developer/exignorantia" target="_blank" rel="noopener noreferrer">STEAM</a><a href="https://www.instagram.com/ex.ignorantia/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a><a href="https://discord.gg/w3hqJhzZX" target="_blank" rel="noopener noreferrer">DISCORD</a></div></div>
+    </section>
+
+    <section id="window-terminal" class="window app-window" data-window="terminal" style="left: 260px; top: 150px; width: 350px;">
+      <div class="title-bar"><div class="title-bar-text">MS-DOS Prompt - EXOS</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body terminal-body"><pre>EX IGNORANTIA [Version 0.13.666]
+(C) 2026 Ex Ignorantia. All wrongs reserved.
+
+C:\EXOS&gt; type manifesto.txt
+We build strange games about doomed worlds, rituals, impossible systems and the fragile humans trapped inside them.
+
+C:\EXOS&gt; _
+
+ /^^\
+ (*_*)
+/|:::|\
+ /   \</pre></div>
+    </section>
+
+    <section id="window-chartpaint" class="window app-window tool-window" data-window="chartpaint" style="left: 270px; top: 100px; width: 650px;">
+      <div class="title-bar"><div class="title-bar-text">ChartPaint.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body">
+        <div class="tool-help">Paint a forbidden chart. Click/drag over the bars to change values.</div>
+        <canvas id="chartCanvas" width="560" height="300"></canvas>
+        <div class="tool-controls"><button id="chartRandom">Randomize</button><button id="chartClear">Clear</button><button data-export="chartCanvas">Export PNG</button></div>
+      </div>
+    </section>
+
+    <section id="window-effecto" class="window app-window tool-window" data-window="effecto" style="left: 300px; top: 130px; width: 680px;">
+      <div class="title-bar"><div class="title-bar-text">Noise_Applier.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body">
+        <div class="tool-help">Upload an image and process it through EXOS red-channel corruption.</div>
+        <div class="tool-controls"><input id="effectoFile" type="file" accept="image/*"><label>Contrast <input id="effectoContrast" type="range" min="50" max="240" value="135"></label><label>Noise <input id="effectoNoise" type="range" min="0" max="100" value="18"></label><label>Invert <input id="effectoInvert" type="checkbox"></label><button id="effectoDemo">Demo</button><button data-export="effectoCanvas">Export PNG</button></div>
+        <canvas id="effectoCanvas" width="560" height="320"></canvas>
+      </div>
+    </section>
+
+    <section id="window-ascii" class="window app-window tool-window" data-window="ascii" style="left: 330px; top: 160px; width: 680px;">
+      <div class="title-bar"><div class="title-bar-text">ASCII_Maker.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body">
+        <div class="tool-help">Type text or upload an image to generate terminal ASCII.</div>
+        <div class="tool-controls"><input id="asciiText" type="text" value="EX IGNORANTIA"><button id="asciiRenderText">Render Text</button><input id="asciiFile" type="file" accept="image/*"><button id="asciiCopy">Copy</button></div>
+        <pre id="asciiOutput" class="ascii-output"></pre>
+        <canvas id="asciiHiddenCanvas" width="120" height="80" hidden></canvas>
+      </div>
+    </section>
+
+    <section id="window-dither" class="window app-window tool-window" data-window="dither" style="left: 360px; top: 120px; width: 680px;">
+      <div class="title-bar"><div class="title-bar-text">Dither.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body">
+        <div class="tool-help">Black/red ordered dithering for screenshots, logos or cursed documents.</div>
+        <div class="tool-controls"><input id="ditherFile" type="file" accept="image/*"><label>Scale <input id="ditherScale" type="range" min="1" max="8" value="3"></label><button id="ditherDemo">Demo</button><button data-export="ditherCanvas">Export PNG</button></div>
+        <canvas id="ditherCanvas" width="560" height="320"></canvas>
+      </div>
+    </section>
+
+    <section id="window-kaleido" class="window app-window tool-window" data-window="kaleido" style="left: 390px; top: 90px; width: 680px;">
+      <div class="title-bar"><div class="title-bar-text">Sigil_Paths.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body">
+        <div class="tool-help">Draw once. The system mirrors the gesture into a ritual path.</div>
+        <canvas id="kaleidoCanvas" width="560" height="420"></canvas>
+        <div class="tool-controls kaleido-main-controls"><label>Symmetry <input id="kaleidoSym" type="range" min="3" max="16" value="10"></label><label>Brush <input id="kaleidoBrush" type="range" min="1" max="12" value="2"></label><select id="kaleidoColor"><option value="#ff101a">red</option><option value="#7cff18">green</option><option value="#d7c700">yellow</option></select><button id="kaleidoClear">Clear</button><button id="kaleidoSeed">Generate</button><button data-export="kaleidoCanvas">Export PNG</button></div>
+        <fieldset class="record-motion-panel">
+          <legend>RECORD MOTION</legend>
+          <div class="record-buttons"><button id="kaleidoRecord" type="button">record</button><button id="kaleidoErase" type="button">erase</button></div>
+          <label>play speed <span id="kaleidoPlaySpeedOut">50</span><input id="kaleidoPlaySpeed" type="range" min="1" max="100" value="50"></label>
+          <label>stroke length <span id="kaleidoStrokeLengthOut">100</span><input id="kaleidoStrokeLength" type="range" min="1" max="100" value="100"></label>
+          <p id="kaleidoRecordStatus" class="record-status">Click Record, draw on canvas. Release mouse to finish & auto-play.</p>
+        </fieldset>
+      </div>
+    </section>
+
+
+
+
+    <section id="window-cursorlab" class="window app-window tool-window cursorlab-window" data-window="cursorlab" style="left: 285px; top: 78px; width: 760px;">
+      <div class="title-bar"><div class="title-bar-text">Cursor_Lab.EXE</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body cursorlab-body">
+        <aside class="cursorlab-panel">
+          <fieldset>
+            <legend>CURSOR PRESETS</legend>
+            <button class="cursor-preset is-selected" data-cursor="default">Default Arrow</button>
+            <button class="cursor-preset" data-cursor="redArrow">Red Arrow</button>
+            <button class="cursor-preset" data-cursor="terminalBlock">Terminal Block</button>
+            <button class="cursor-preset" data-cursor="crosshair">Crosshair</button>
+            <button class="cursor-preset" data-cursor="ritualHand">Ritual Hand</button>
+            <button class="cursor-preset" data-cursor="crowBeak">Crow Beak</button>
+            <button class="cursor-preset" data-cursor="forbidden">Forbidden Pointer</button>
+          </fieldset>
+          <fieldset>
+            <legend>PARAMETERS</legend>
+            <label class="cursor-range">SIZE <output id="cursorSizeOut">32</output><input id="cursorSize" type="range" min="16" max="64" value="32"></label>
+            <label class="cursor-range">GLOW <output id="cursorGlowOut">35</output><input id="cursorGlow" type="range" min="0" max="100" value="35"></label>
+            <label class="cursor-toggle"><input id="cursorTrail" type="checkbox" checked> Trail</label>
+            <label class="cursor-toggle"><input id="cursorSystemWide" type="checkbox" checked> Apply to whole OS</label>
+          </fieldset>
+          <div class="cursor-action-grid">
+            <button id="cursorApply">Apply Cursor</button>
+            <button id="cursorReset">Reset</button>
+          </div>
+          <p class="tool-help small">Choose a cursed pointer style. Cursor Lab changes the OS cursor without affecting the rest of the site layout.</p>
+        </aside>
+        <div class="cursorlab-preview">
+          <div class="cursor-preview-monitor">
+            <div id="cursorPreviewGlyph" class="cursor-preview-glyph">➜</div>
+            <p>MOVE YOUR MOUSE HERE</p>
+            <span>C:\EXOS\TOOLS\CURSOR_LAB&gt; calibrating pointer...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="window-pixelrain" class="window app-window tool-window pixel-rain-window" data-window="pixelrain" style="left: 210px; top: 30px; width: 1090px;">
+      <div class="title-bar"><div class="title-bar-text">DATA FALL</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body tool-body pixel-rain-body">
+        <aside class="rain-panel">
+          <fieldset>
+            <legend>CHARACTERS</legend>
+            <input id="rainCharInput" class="rain-text-input" type="text" value="The characters" aria-label="Data Fall characters">
+            <div class="rain-button-grid">
+              <button class="rain-char-preset" data-chars="カタカナアイウエオカキクケコサシスセソタチツテトナニヌネノマミムメモラリルレロワヲン">カタカナ</button>
+              <button class="rain-char-preset" data-chars="01">01</button>
+              <button class="rain-char-preset" data-chars="0xF0123456789ABCDEF">0xF</button>
+              <button class="rain-char-preset" data-chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ">ABC</button>
+              <button class="rain-char-preset" data-chars="1234567890">123</button>
+              <button class="rain-char-preset" data-chars="☼βγµηΩΦΨΣ∆∞">∞βγ</button>
+              <button class="rain-char-preset" data-chars="▓▒░█▌▐▀▄■□▪▫">▦</button>
+              <button class="rain-char-preset" data-chars="+.-_/\|:;=<>[]{}">+-</button>
+              <button class="rain-char-preset" data-chars="▧▨▩▤▥▦▣◧◨">▦</button>
+              <button class="rain-char-preset" data-chars="✦✧✹✺✷✴✶">★</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>PARAMETERS</legend>
+            <label class="rain-range">SPEED <output id="rainSpeedOut">8</output><input id="rainSpeed" type="range" min="1" max="20" value="8"></label>
+            <label class="rain-range">DENSITY <output id="rainDensityOut">25</output><input id="rainDensity" type="range" min="1" max="80" value="25"></label>
+            <label class="rain-range">FONT SIZE <output id="rainFontSizeOut">16</output><input id="rainFontSize" type="range" min="8" max="32" value="16"></label>
+            <label class="rain-range">TRAIL <output id="rainTrailOut">80</output><input id="rainTrail" type="range" min="5" max="98" value="80"></label>
+            <label class="rain-range">CHAR SPEED <output id="rainCharSpeedOut">100</output><input id="rainCharSpeed" type="range" min="5" max="200" value="100"></label>
+            <label class="rain-range">WIND <output id="rainWindOut">0</output><input id="rainWind" type="range" min="-10" max="10" value="0"></label>
+            <label class="rain-range">GRAVITY <output id="rainGravityOut">4</output><input id="rainGravity" type="range" min="0" max="20" value="4"></label>
+            <label class="rain-range">RANDOMIZE <output id="rainRandomOut">12</output><input id="rainRandom" type="range" min="0" max="100" value="12"></label>
+            <label class="rain-range">GLOW <output id="rainGlowOut">55</output><input id="rainGlow" type="range" min="0" max="100" value="55"></label>
+            <label class="rain-range">RAINBOW <output id="rainRainbowOut">0</output><input id="rainRainbow" type="range" min="0" max="100" value="0"></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>COLORS</legend>
+            <div class="rain-colors"><label>Draw <input id="rainDrawColor" type="color" value="#ff101a"></label><label>BG <input id="rainBgColor" type="color" value="#1a0507"></label></div>
+          </fieldset>
+
+          <div class="rain-action-grid">
+            <button id="rainToggle">Pause</button>
+            <button id="rainBurst">Burst</button>
+            <button id="rainClear">Clear</button>
+            <button data-export="rainCanvas">Export PNG</button>
+          </div>
+          <div class="rain-status"><span>Chars: <b id="rainCharsLabel">Abc</b></span><span>FPS: <b id="rainFps">--</b></span></div>
+        </aside>
+        <canvas id="rainCanvas" width="880" height="650"></canvas>
+      </div>
+    </section>
+
+    <section id="window-secret" class="window app-window secret-window" data-window="secret" style="left: 390px; top: 190px; width: 450px;">
+      <div class="title-bar"><div class="title-bar-text">DO_N0T_0PEN!!!</div><div class="title-bar-controls"><button aria-label="Minimize" data-action="minimize"></button><button aria-label="Maximize" data-action="maximize"></button><button aria-label="Close" data-action="close"></button></div></div>
+      <div class="window-body terminal-body"><pre>WARNING: SYSTEM INTEGRITY FAILURE
+
+C:\EXOS&gt; open forbidden.sys
+FILE OPENED.
+DITHER MODE: ENABLED
+MONOCHROME: RED/BLACK
+RESTORE METHOD: REBOOT ONLY
+
+THE VEIL IS NOT A WALL.
+THE FILE IS NOT A FILE.
+THE OS IS WATCHING.</pre></div>
+    </section>
+
+    <nav id="startMenu" class="start-menu" aria-label="Start menu">
+      <button data-open="welcome">About_EX</button>
+      <button data-open="games">Games</button>
+      <button data-open="press">Press_Kit</button>
+      <button data-open="contact">Contact</button>
+      <button data-open="terminal">Terminal</button>
+      <hr>
+      <button data-open="chartpaint">ChartPaint</button>
+      <button data-open="effecto">Noise Applier</button>
+      <button data-open="ascii">ASCII Maker</button>
+      <button data-open="dither">Dither</button>
+      <button data-open="kaleido">Sigil Paths</button>
+      <button data-open="pixelrain">Data Fall</button>
+      <button data-open="cursorlab">Cursor Lab</button>
+      <hr>
+      <button id="rebootButton" type="button">Reboot</button>
+    </nav>
+
+    <footer class="taskbar" aria-label="Taskbar">
+      <button id="startButton" class="start-button" type="button">Start</button>
+      <div id="taskButtons" class="task-buttons"></div>
+      <time id="clock" class="clock">11:56</time>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

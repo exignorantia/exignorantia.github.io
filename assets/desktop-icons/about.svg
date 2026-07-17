@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <ellipse cx="29.619" cy="29.619" rx="23.078" ry="28.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <ellipse cx="29.619" cy="29.619" rx="11.706" ry="28.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="1" y1="29.619" x2="58.239" y2="29.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="3.418" y1="18.092" x2="55.823" y2="18.092" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="8.653" y1="10.088" x2="50.587" y2="10.088" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="8.653" y1="49.151" x2="50.587" y2="49.151" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="3.418" y1="41.146" x2="55.823" y2="41.146" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

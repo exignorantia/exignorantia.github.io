@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="64.66" height="64.66" viewBox="0 0 64.66 64.66">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect x="1" y="1" width="62.66" height="45.1" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="59.046" width="62.66" height="4.614" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="1" y="50.266" width="62.66" height="4.614" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <polygon points="63.66 46.1 32.33 17.622 1 46.1 63.66 46.1" stroke="#ff0014" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <polygon points="1 1 32.33 29.478 63.66 1 1 1" stroke="#ff0014" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

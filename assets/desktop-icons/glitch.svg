@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="66.119" height="57.261" viewBox="0 0 66.119 57.261">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon points="33.059 2 1.732 56.261 64.387 56.261 33.059 2"/>
+        <g>
+          <polyline points="33.809 3.299 33.059 2 32.309 3.299" fill="none" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="30.739" y1="6.018" x2="3.267" y2="53.602" fill="none" stroke="#ff0014" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+          <polyline points="2.482 54.962 1.732 56.261 3.232 56.261" fill="none" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="6.372" y1="56.261" x2="61.317" y2="56.261" fill="none" stroke="#ff0014" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+          <polyline points="62.887 56.261 64.387 56.261 63.637 54.962" fill="none" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="62.067" y1="52.242" x2="34.594" y2="4.659" fill="none" stroke="#ff0014" stroke-dasharray="3.14 3.14" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <g>
+        <rect x="7.451" y="21.811" width="51.211" height="26.409" fill="none"/>
+        <path d="M33.057,42.635c-.667,0-1.137-.14-1.41-.42s-.41-.62-.41-1.02v-.56c0-.4.136-.74.41-1.02s.743-.42,1.41-.42,1.137.14,1.41.42c.273.28.41.62.41,1.02v.56c0,.4-.137.74-.41,1.02-.273.28-.744.42-1.41.42ZM32.637,37.595l-.98-5.088v-4.052h2.8v4.052l-.98,5.088h-.84Z" fill="#ff0014"/>
+      </g>
+    </g>
+  </g>
+</svg>

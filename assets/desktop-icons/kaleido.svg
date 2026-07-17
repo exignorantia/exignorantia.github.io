@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="59.239" height="59.239" viewBox="0 0 59.239 59.239">
+  <g id="c" data-name="Layer 1">
+    <g>
+      <circle cx="29.619" cy="29.619" r="28.619" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="29.619" cy="29.619" r="19.08" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="29.619" cy="29.619" r="9.54" stroke="#ff0014" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
