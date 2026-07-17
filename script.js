@@ -661,56 +661,50 @@ function initKaleido(){
 function initPixelRain(){
   const canvas = document.getElementById('rainCanvas');
   if(!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { alpha: false });
 
   const $ = id => document.getElementById(id);
   const controls = {
-    chars: $('rainCharInput'),
-    speed: $('rainSpeed'),
-    density: $('rainDensity'),
-    fontSize: $('rainFontSize'),
-    trail: $('rainTrail'),
-    charSpeed: $('rainCharSpeed'),
-    wind: $('rainWind'),
-    gravity: $('rainGravity'),
-    randomize: $('rainRandom'),
-    glow: $('rainGlow'),
-    rainbow: $('rainRainbow'),
-    draw: $('rainDrawColor'),
-    bg: $('rainBgColor')
+    chars: $('rainCharInput'), speed: $('rainSpeed'), density: $('rainDensity'),
+    fontSize: $('rainFontSize'), trail: $('rainTrail'), charSpeed: $('rainCharSpeed'),
+    wind: $('rainWind'), gravity: $('rainGravity'), randomize: $('rainRandom'),
+    glow: $('rainGlow'), rainbow: $('rainRainbow'), draw: $('rainDrawColor'), bg: $('rainBgColor')
   };
-
   const outputs = {
-    speed: $('rainSpeedOut'),
-    density: $('rainDensityOut'),
-    fontSize: $('rainFontSizeOut'),
-    trail: $('rainTrailOut'),
-    charSpeed: $('rainCharSpeedOut'),
-    wind: $('rainWindOut'),
-    gravity: $('rainGravityOut'),
-    randomize: $('rainRandomOut'),
-    glow: $('rainGlowOut'),
+    speed: $('rainSpeedOut'), density: $('rainDensityOut'), fontSize: $('rainFontSizeOut'),
+    trail: $('rainTrailOut'), charSpeed: $('rainCharSpeedOut'), wind: $('rainWindOut'),
+    gravity: $('rainGravityOut'), randomize: $('rainRandomOut'), glow: $('rainGlowOut'),
     rainbow: $('rainRainbowOut')
   };
 
   const toggle = $('rainToggle');
   const fpsEl = $('rainFps');
   const charsLabel = $('rainCharsLabel');
+  const rainWindow = canvas.closest('.window');
+  const isFirefox = /firefox/i.test(navigator.userAgent);
+  const densityMultiplier = isFirefox ? 1.15 : 1.7;
+  const burstAmount = isFirefox ? 36 : 90;
+  const maxGlow = isFirefox ? 6 : 16;
+
   let running = true;
   let drops = [];
   let lastTime = performance.now();
-  let fpsTime = performance.now();
+  let fpsTime = lastTime;
   let frames = 0;
+  let rafId = null;
+  let warmupStartedAt = 0;
+  let ditherPattern = null;
+  let ditherKey = '';
 
   function val(name){ return Number(controls[name].value); }
-  function chars(){ return (controls.chars.value || 'EXIGNORANTIA01').split(''); }
+  function glyphSet(){ return Array.from(controls.chars.value || 'EXIGNORANTIA01'); }
   function updateOutputs(){
-    Object.keys(outputs).forEach(k => outputs[k].textContent = controls[k].value);
-    charsLabel.textContent = controls.chars.value.slice(0, 3) || 'Ex';
+    Object.keys(outputs).forEach(k => { if(outputs[k] && controls[k]) outputs[k].textContent = controls[k].value; });
+    if(charsLabel) charsLabel.textContent = (controls.chars.value || 'EXI').slice(0, 3);
   }
-
   function hexToRgb(hex){
-    const n = parseInt(hex.slice(1), 16);
+    const clean = String(hex || '#000000').replace('#','').padEnd(6,'0').slice(0,6);
+    const n = parseInt(clean, 16) || 0;
     return {r:(n>>16)&255, g:(n>>8)&255, b:n&255};
   }
   function rgba(hex, a){
@@ -721,7 +715,11 @@ function initPixelRain(){
     const hue = (performance.now() * 0.04 + seed * 22) % 360;
     return `hsl(${hue},100%,58%)`;
   }
-
+  function isVisible(){
+    if(document.hidden) return false;
+    if(window.matchMedia('(max-width: 800px)').matches) return false;
+    return !rainWindow || (rainWindow.classList.contains('is-open') && !rainWindow.classList.contains('is-minimized'));
+  }
   function makeDrop(forceTop=false){
     const size = val('fontSize');
     return {
@@ -730,47 +728,88 @@ function initPixelRain(){
       vy: Math.max(0.4, val('speed') * 0.32 + Math.random() * 2),
       phase: Math.random() * 999,
       length: Math.floor(6 + Math.random() * (val('trail') / 3 + 4)),
-      charTimer: 0,
+      charTimer: Math.random() * 120,
       glyphs: [],
       size
     };
   }
-
+  function targetDensity(){
+    const warmup = warmupStartedAt ? Math.min(1, (performance.now() - warmupStartedAt) / 900) : 0;
+    const eased = warmup * warmup * (3 - 2 * warmup);
+    return Math.floor(val('density') * densityMultiplier * eased);
+  }
   function ensureDensity(){
-    const target = Math.floor(val('density') * 1.7);
+    const target = targetDensity();
     while(drops.length < target) drops.push(makeDrop(true));
     if(drops.length > target) drops.length = target;
   }
-
   function clearRain(){
+    ctx.save();
+    ctx.shadowBlur = 0;
+    ctx.globalAlpha = 1;
     ctx.fillStyle = controls.bg.value;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
   }
-
-  function drawDitherOverlay(){
+  function warmGlyphCache(){
+    const set = [...new Set(glyphSet())];
+    ctx.save();
+    ctx.globalAlpha = 0.001;
+    ctx.font = `${val('fontSize')}px "Courier New", monospace`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    set.forEach((ch, i) => ctx.fillText(ch, -50 - i, -50));
+    ctx.restore();
+  }
+  function getDitherPattern(){
     const alpha = document.body.classList.contains('is-corrupted') ? 0.18 : 0.08;
-    ctx.fillStyle = `rgba(0,0,0,${alpha})`;
-    for(let y=0; y<canvas.height; y+=4){
-      for(let x=(y/4)%2 ? 2 : 0; x<canvas.width; x+=4){
-        ctx.fillRect(x, y, 2, 2);
-      }
-    }
+    const key = String(alpha);
+    if(ditherPattern && ditherKey === key) return ditherPattern;
+    const tile = document.createElement('canvas');
+    tile.width = 8; tile.height = 8;
+    const tctx = tile.getContext('2d');
+    tctx.clearRect(0,0,8,8);
+    tctx.fillStyle = `rgba(0,0,0,${alpha})`;
+    tctx.fillRect(0,0,2,2);
+    tctx.fillRect(4,0,2,2);
+    tctx.fillRect(2,4,2,2);
+    tctx.fillRect(6,4,2,2);
+    ditherPattern = ctx.createPattern(tile, 'repeat');
+    ditherKey = key;
+    return ditherPattern;
   }
-
+  function drawDitherOverlay(){
+    const pattern = getDitherPattern();
+    if(!pattern) return;
+    ctx.save();
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = pattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
+  }
+  function schedule(){
+    if(rafId === null) rafId = requestAnimationFrame(tick);
+  }
   function tick(now){
-    const dt = Math.min(42, now - lastTime);
+    rafId = null;
+    const visible = isVisible();
+    const dt = Math.min(42, Math.max(0, now - lastTime));
     lastTime = now;
-    const rainWindow = canvas.closest('.window');
-    const rainVisible = !window.matchMedia('(max-width: 800px)').matches && (!rainWindow || (rainWindow.classList.contains('is-open') && !rainWindow.classList.contains('is-minimized')));
 
-    if(!rainVisible){
-      requestAnimationFrame(tick);
+    if(!visible){
+      if(fpsEl) fpsEl.textContent = '--';
+      schedule();
       return;
+    }
+
+    if(!warmupStartedAt){
+      warmupStartedAt = now;
+      warmGlyphCache();
     }
 
     frames++;
     if(now - fpsTime > 500){
-      fpsEl.textContent = Math.round(frames * 1000 / (now - fpsTime));
+      if(fpsEl) fpsEl.textContent = Math.round(frames * 1000 / (now - fpsTime));
       frames = 0;
       fpsTime = now;
     }
@@ -778,16 +817,21 @@ function initPixelRain(){
     if(running){
       ensureDensity();
       const trailFade = 1 - (val('trail') / 100);
+      ctx.save();
+      ctx.shadowBlur = 0;
       ctx.fillStyle = rgba(controls.bg.value, Math.max(0.025, Math.min(0.65, trailFade)));
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.restore();
 
-      const glyphSet = chars();
+      const set = glyphSet();
       const baseSize = val('fontSize');
       const wind = val('wind') / 18;
       const gravity = 1 + val('gravity') / 12;
       const randomize = val('randomize') / 100;
       const glow = val('glow') / 100;
       const rainbow = val('rainbow') / 100;
+      const refreshAt = Math.max(20, 220 - val('charSpeed'));
+
       ctx.font = `${baseSize}px "Courier New", monospace`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
@@ -797,9 +841,8 @@ function initPixelRain(){
         d.y += d.vy * gravity * dt / 16;
         d.x += wind * dt + Math.sin((now/380) + d.phase) * randomize * 1.5;
         d.charTimer += dt;
-        const refreshAt = Math.max(12, 220 - val('charSpeed'));
         if(d.charTimer > refreshAt || d.glyphs.length !== d.length){
-          d.glyphs = Array.from({length: d.length}, () => glyphSet[Math.floor(Math.random()*glyphSet.length)]);
+          d.glyphs = Array.from({length: d.length}, () => set[Math.floor(Math.random()*set.length)] || '0');
           d.charTimer = 0;
         }
 
@@ -811,7 +854,7 @@ function initPixelRain(){
           const color = rainbow > 0 && Math.random() < rainbow ? rainbowColor(dropIndex+i) : controls.draw.value;
           if(glow > 0){
             ctx.shadowColor = isHead ? '#ffffff' : color;
-            ctx.shadowBlur = isHead ? 16 * glow : 10 * glow;
+            ctx.shadowBlur = Math.min(maxGlow, (isHead ? 16 : 10) * glow);
           } else {
             ctx.shadowBlur = 0;
           }
@@ -827,27 +870,45 @@ function initPixelRain(){
       ctx.shadowBlur = 0;
       drawDitherOverlay();
     }
-    requestAnimationFrame(tick);
+    schedule();
   }
 
   Object.values(controls).forEach(input => input && input.addEventListener('input', () => {
     updateOutputs();
     if(input === controls.bg) clearRain();
+    if(input === controls.chars || input === controls.fontSize){
+      warmGlyphCache();
+      drops.forEach(d => { d.glyphs = []; });
+    }
   }));
   document.querySelectorAll('.rain-char-preset').forEach(btn => {
     btn.addEventListener('click', () => {
       controls.chars.value = btn.dataset.chars;
       updateOutputs();
+      warmGlyphCache();
+      drops.forEach(d => { d.glyphs = []; });
     });
   });
-  toggle.addEventListener('click', ()=>{ running=!running; toggle.textContent=running?'Pause':'Play'; });
-  $('rainBurst').addEventListener('click', ()=>{ for(let i=0;i<90;i++) drops.push(makeDrop(true)); });
-  $('rainClear').addEventListener('click', ()=>{ drops = []; clearRain(); ensureDensity(); });
+  toggle.addEventListener('click', ()=>{
+    running = !running;
+    toggle.textContent = running ? 'Pause' : 'Play';
+  });
+  $('rainBurst').addEventListener('click', ()=>{
+    for(let i=0; i<burstAmount; i++) drops.push(makeDrop(true));
+  });
+  $('rainClear').addEventListener('click', ()=>{
+    drops = [];
+    warmupStartedAt = performance.now() - 900;
+    clearRain();
+    ensureDensity();
+  });
+  document.addEventListener('visibilitychange', ()=>{
+    lastTime = performance.now();
+  });
 
   updateOutputs();
   clearRain();
-  ensureDensity();
-  requestAnimationFrame(tick);
+  schedule();
 }
 
 // CURSOR LAB
